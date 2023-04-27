@@ -5,9 +5,8 @@ const Logo = () => {
     return (
         <Link
             to={"/"}
-            className='p-3 font-mono font-semibold text-white bg-sky-400 rounded-xl' >
+            className='p-3 font-mono font-semibold text-white dark:text-sky-400 bg-sky-400 dark:bg-white rounded-md' >
             DEVELOPERS
-
         </Link>
     );
 }

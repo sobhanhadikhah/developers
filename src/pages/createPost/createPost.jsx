@@ -9,25 +9,25 @@ import Select from "react-select";
 import makeAnimated from 'react-select/animated';
 
 function CreatePost() {
-    const animatedComponents = makeAnimated();
-    const options = [
-        {
-            label: "#Apple",
-            value: "apple",
-        },
-        {
-            label: "#Mango",
-            value: "mango",
-        },
-        {
-            label: "#Banana",
-            value: "banana",
-        },
-        {
-            label: "#Pineapple",
-            value: "#pineapple",
-        },
-    ]
+    /*  const animatedComponents = makeAnimated();
+     const options = [
+         {
+             label: "#Apple",
+             value: "apple",
+         },
+         {
+             label: "#Mango",
+             value: "mango",
+         },
+         {
+             label: "#Banana",
+             value: "banana",
+         },
+         {
+             label: "#Pineapple",
+             value: "#pineapple",
+         },
+     ] */
     const navigate = useNavigate();
     const [loadingBTN, setLoadingBTN] = useState(false)
     async function handleonSubmite(data,) {

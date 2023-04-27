@@ -20,7 +20,7 @@ const Button = ({
             <Link
 
                 to={path}
-                className={`w-fit rounded-full py-2 px-8 cursor-pointer active:scale-95
+                className={`w-fit  rounded-full py-2 px-8 cursor-pointer active:scale-95
                 shadow-md text-xs duration-300 
                 ${transparent ? "bg-transparent  border-2 border-black  " : null}
                 ${bgColor ? bgColor : "bg-[#1a5cff]"} 
