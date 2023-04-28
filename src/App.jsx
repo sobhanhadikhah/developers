@@ -2,7 +2,11 @@ import AllRoute from "./routes/allRoute"
 
 function App() {
 
-  return <AllRoute />
+  return (
+    <div className="bg-white dark:bg-black" >
+      <AllRoute />
+    </div>
+  )
 }
 
 export default App

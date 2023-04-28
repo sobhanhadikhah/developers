@@ -11,16 +11,18 @@ const InputTitle = ({
 }) => {
     return (
 
-        <input
-            id={id}
-            {...props}
-            {...field}
-            className="   focus:ring-sky-400 ring-2 bg-transparent outline-none
-                        py-3 px-4  rounded-3xl border-2
-                        focus:px-6 duration-200"
-            type="text"
-            placeholder="Title"
-        />
+        <div className='flex flex-col gap-3 ' >
+            <label className="text-xl font-extrabold tracking-widest uppercase dark:text-sky-400 " htmlFor={id}>Title</label>
+
+            <input
+                id={id}
+                {...props}
+                {...field}
+                className="px-4 py-3 duration-200 bg-transparent border-2 outline-none focus:ring-sky-400 dark:focus:ring-0 ring-2 rounded-3xl focus:px-6 dark:placeholder:text-white dark:text-white"
+                type="text"
+                placeholder="Write your subject here..."
+            />
+        </div>
 
     );
 }

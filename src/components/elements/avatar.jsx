@@ -5,7 +5,7 @@ function Avatar({ src }) {
     return (
         <LazyLoadImage
             effect='blur'
-            className='w-8 h-8 duration-200 rounded-full group-hover:scale-150'
+            className='w-8 h-8 duration-200 ease-in-out rounded-full dura group-hover:scale-150 '
             src={`${src && src}`}
             alt="profile" />
     )

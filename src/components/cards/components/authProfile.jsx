@@ -7,7 +7,7 @@ const AuthProfile = ({ createdAt, author }) => {
     const diffInHours = Math.floor(diffInMs / (1000 * 60 * 60));
 
     return (
-        <div className="flex items-center gap-3 " >
+        <div className="flex items-center gap-3 text-black dark:text-white " >
             <div className='flex items-center space-x-3'>
                 <div className='group'>
                     <Avatar src={author.profile} />

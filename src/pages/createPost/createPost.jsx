@@ -7,6 +7,7 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import Select from "react-select";
 import makeAnimated from 'react-select/animated';
+import { useTitle } from "../../hooks/"
 
 function CreatePost() {
     /*  const animatedComponents = makeAnimated();
@@ -28,6 +29,8 @@ function CreatePost() {
              value: "#pineapple",
          },
      ] */
+
+    useTitle("Post")
     const navigate = useNavigate();
     const [loadingBTN, setLoadingBTN] = useState(false)
     async function handleonSubmite(data,) {
@@ -52,10 +55,10 @@ function CreatePost() {
         text-white text-xs duration-300 active:bg-opacity-80
         ease-in-out font-medium md:text-sm`;
     return (
-        <section className="h-screen max-w-2xl mx-auto font-mono   " >
-            <div className="flex flex-col m-6" >
-                <div className="flex items-center py-8 text-xl lg:text-xl" >
-                    <h1>Say Somthing to Developers!!!</h1>
+        <section className="h-screen max-w-2xl mx-auto font-mono " >
+            <div className="flex flex-col pt-12 m-6 lg:pt-16" >
+                <div className="flex items-center py-8 text-2xl text-center lg:text-3xl" >
+                    <h1 className="font-extrabold tracking-widest uppercase dark:text-white " >Say something <br />to Developers {`</>`}</h1>
                 </div>
                 <Formik
                     initialValues={postIntialValue}
@@ -113,7 +116,7 @@ function CreatePost() {
                                     type="submit"
                                     className={submitButton}
                                 >
-                                    {loadingBTN ? <div className="w-5 h-5 border-l-2 border-white rounded-full animate-spin" /> : "Post"}
+                                    {loadingBTN ? <div className="w-5 h-5 border-l-2 border-white rounded-full animate-spin" /> : "Send"}
                                 </button>
                             </form>
                         )

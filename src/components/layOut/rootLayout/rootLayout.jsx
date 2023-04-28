@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Header, NavigitionBar } from "../../../components/layOut";
+import { Fotter, Header, NavigitionBar } from "../../../components/layOut";
 import { useState } from "react";
 import { useDarkMode } from "../../../hooks/useDarkMode";
 
@@ -11,12 +11,12 @@ const RootLayout = () => {
     return (
         <>
             <Header theme={theme} setTheme={setTheme} />
-            <main  >
+            <main className="bg-white dark:bg-black"  >
                 <Outlet />
             </main>
             <NavigitionBar />
-            {/* <Fotter />
- */}
+            <Fotter />
+
         </>
     );
 }

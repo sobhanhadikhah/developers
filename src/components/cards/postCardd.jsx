@@ -11,12 +11,12 @@ const PostCardd = (props) => {
     return (
         <div
             className="
-             lg:w-[600px] w-full p-4 mx-3 font-mono bg-white 
-             selection:text-whiteselection:bg-black rounded-xl
-            border border-gray-300 
+             lg:w-[600px] w-full p-4 mx-3 font-mono dark:bg-black  bg-white 
+            selection:text-white selection:bg-black dark:selection:bg-sky-400 rounded-xl
+            border border-gray-300 dark:border-gray-800
           "
         >
-            <div className="flex flex-col" >
+            <div className="flex flex-col " >
                 {/* profile auth */}
                 <AuthProfile
                     author={author}
