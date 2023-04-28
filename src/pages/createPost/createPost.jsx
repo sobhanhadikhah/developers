@@ -3,34 +3,22 @@ import { InputTitle, TextArea } from "./components";
 import { postIntialValue, postValiditionSchema } from "../../schema/postValidition";
 import { useNavigate } from "react-router-dom";
 import sendPost from "../../services/makePost";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Select from "react-select";
 import makeAnimated from 'react-select/animated';
 import { useTitle } from "../../hooks/"
+import fetchTags from "../../services/fetchTags";
 
 function CreatePost() {
-    /*  const animatedComponents = makeAnimated();
-     const options = [
-         {
-             label: "#Apple",
-             value: "apple",
-         },
-         {
-             label: "#Mango",
-             value: "mango",
-         },
-         {
-             label: "#Banana",
-             value: "banana",
-         },
-         {
-             label: "#Pineapple",
-             value: "#pineapple",
-         },
-     ] */
+    //const animatedComponents = makeAnimated();
 
-    useTitle("Post")
+    const [tags, setTags] = useState()
+    useTitle("Post");
+    useEffect(() => {
+        fetchTags(setTags)
+        console.log(tags)
+    }, [])
     const navigate = useNavigate();
     const [loadingBTN, setLoadingBTN] = useState(false)
     async function handleonSubmite(data,) {
@@ -58,7 +46,9 @@ function CreatePost() {
         <section className="h-screen max-w-2xl mx-auto font-mono " >
             <div className="flex flex-col pt-12 m-6 lg:pt-16" >
                 <div className="flex items-center py-8 text-2xl text-center lg:text-3xl" >
-                    <h1 className="font-extrabold tracking-widest uppercase dark:text-white " >Say something <br />to Developers {`</>`}</h1>
+                    <h1 className="font-extrabold tracking-widest uppercase dark:text-white " >
+                        Say something <br />to Developers {`</>`}
+                    </h1>
                 </div>
                 <Formik
                     initialValues={postIntialValue}
@@ -84,6 +74,12 @@ function CreatePost() {
                                         {msg}
                                     </span>}
                                 </ErrorMessage>
+                                <ErrorMessage name="tags">
+                                    {msg => <span
+                                        className="text-sm text-red-400 capitalize">
+                                        {msg}
+                                    </span>}
+                                </ErrorMessage>
                                 {/* input */}
                                 <Field
                                     component={InputTitle}
@@ -97,18 +93,26 @@ function CreatePost() {
                                     id="description"
                                 />
                                 {/* tags input */}
-                                {/* <Field
+                                <label htmlFor="tags">tags</label>
+                                <Select
+                                    options={tags}
+                                    isLoading={tags ? false : true}
                                     name="tags"
                                     id="tags"
-                                    component={
-                                        <Select
-                                            isMulti
-                                            closeMenuOnSelect={false}
-                                            components={animatedComponents}
-                                            options={options}
+                                    isSearchable={true}
+                                    isMulti
+                                    onChange={(options) =>
+                                        formik.setFieldValue(
+                                            'tags',
+                                            options ? options.map((option) => option.value) : []
+                                        )
+                                    }
+                                    onBlur={formik.handleBlur}
+                                    value={tags && tags.filter((option) =>
+                                        formik.values.tags.includes(option.value)
+                                    )}
 
-                                        />}
-                                /> */}
+                                />
 
                                 {/* submit button */}
                                 <button

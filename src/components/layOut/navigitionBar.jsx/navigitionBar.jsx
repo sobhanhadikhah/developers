@@ -1,19 +1,21 @@
-import React from 'react'
+import { useSelector } from "react-redux"
+import { navigitionBarContentIsAuth, navigitionBarContentIsNotAuth } from "../../../utiels/contents"
+import { ButtonNavigition } from "./components"
 
 function NavigitionBar() {
+    const isAuth = useSelector(state => state.weblog.auth)
     return (
         <section
             id="bottom-navigation"
-            className="fixed inset-x-0 bottom-0 z-10 block bg-white shadow dark:bg-black dark:text-white lg:hidden bottom-navigation"
+            className="fixed inset-x-0 bottom-0 z-10 block m-4 bg-white rounded-full shadow dark:bg-black dark:text-white lg:hidden bottom-navigation"
         >
-            <div id="tabs" className="flex justify-between">
-                <a
-                    href="#"
-                    className="justify-center inline-block w-full pt-2 pb-1 text-center focus:text-teal-500 hover:text-teal-500"
-                >
+            <div id="tabs" className="flex justify-between ">
+                {
+                    isAuth ?
+                        navigitionBarContentIsAuth.map((item => <ButtonNavigition key={item.id} {...item} />)) :
+                        navigitionBarContentIsNotAuth.map((item => <ButtonNavigition key={item.id}  {...item} />))
 
-                    <span className="block text-xs tab tab-home">Home</span>
-                </a>
+                }
 
             </div>
         </section>

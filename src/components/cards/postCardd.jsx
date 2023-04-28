@@ -3,7 +3,7 @@ import { AuthProfile, MainPostData, Tags } from "./components";
 
 
 const PostCardd = (props) => {
-    const { title, author, description, createdAt } = props;
+    const { title, author, description, createdAt, tags } = props;
     const [showFullText, setShowFullText] = useState(false);
     function hadnleOnReadMore() {
         setShowFullText(!showFullText);
@@ -30,7 +30,11 @@ const PostCardd = (props) => {
                     description={description}
                 />
                 {/* Hashtag # */}
-                <Tags />
+                <div className="flex gap-3 py-5" >
+                    {
+                        tags.map((tag) => <Tags key={tag} tags={tag} />)
+                    }
+                </div>
             </div>
         </div>
     );

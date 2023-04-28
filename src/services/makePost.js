@@ -10,12 +10,15 @@ async function sendPost(data){
         author: {
             name: auth.currentUser.displayName,
             id: auth.currentUser.uid,
-            profile: auth.currentUser.photoURL
+            profile: auth.currentUser.photoURL,
+            
         },
         createdAt: {
             time: date.getTime(),
             date: date.toDateString()
-        }
+        },
+        tags:data.tags
+
     }
     
     await addDoc(postRef, document)
