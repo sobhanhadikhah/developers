@@ -3,7 +3,7 @@ import AllRoute from "./routes/allRoute"
 function App() {
 
   return (
-    <div className="bg-white dark:bg-black" >
+    <div className="" >
       <AllRoute />
     </div>
   )

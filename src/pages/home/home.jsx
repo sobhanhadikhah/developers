@@ -13,9 +13,9 @@ function Home() {
     }, [])
     useTitle("Home")
     return (
-        <section className='max-w-2xl pt-5 mx-auto border-gray-200 dark:border-gray-800 border-x' >
+        <section className='max-w-2xl pt-5 mx-auto border-gray-200 dark dark:border-gray-800 border-x ' >
             <div className='h-screen' >
-                <div className='flex flex-col items-center justify-center gap-4 mx-3' >
+                <div className='flex flex-col items-center justify-center gap-4 pb-[200px] mx-3 ' >
 
                     {posts.map((post, i) => {
                         return post ? (

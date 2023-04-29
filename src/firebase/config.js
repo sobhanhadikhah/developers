@@ -3,9 +3,7 @@ import {getFirestore} from "firebase/firestore"
 import {getAuth,GoogleAuthProvider} from "firebase/auth"
 import 'firebase/auth';
 import 'firebase/firestore';
-//import { config } from 'dotenv';
 
-//config()
 const firebaseConfig = {
   apiKey: "AIzaSyD6oaKhi4tJUAFWztH9ZNN1Y_I3GY10AgI",
   authDomain: "developer-opa.firebaseapp.com",

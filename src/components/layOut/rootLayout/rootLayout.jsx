@@ -9,15 +9,15 @@ const RootLayout = () => {
     );
     useDarkMode(theme)
     return (
-        <>
+        <div className="bg-white dark:bg-black" >
             <Header theme={theme} setTheme={setTheme} />
-            <main className="bg-white dark:bg-black"  >
+            <main className=""  >
                 <Outlet />
             </main>
             <NavigitionBar />
-            <Fotter />
+            {/* <Fotter /> */}
 
-        </>
+        </div>
     );
 }
 
