@@ -38,7 +38,7 @@ export const navigitionBarContentIsNotAuth = [
     {
         id: "nav",
         title: "Setting",
-        path: "/",
+        path: "setting",
         icon: <CiSettings size={30} />
 
     },
@@ -55,7 +55,7 @@ export const navigitionBarContentIsAuth = [
     {
         id: "navPost",
         title: "Post",
-        path: "/post",
+        path: "post",
         icon: <IoMdAddCircle size={30} />
 
     },
