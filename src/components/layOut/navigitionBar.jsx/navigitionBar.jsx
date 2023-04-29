@@ -7,7 +7,7 @@ function NavigitionBar() {
     return (
         <section
             id="bottom-navigation"
-            className="fixed inset-x-0 bottom-0 z-10 block m-4 bg-white rounded-full shadow dark:bg-black dark:text-white lg:hidden bottom-navigation"
+            className="fixed inset-x-0 bottom-0 z-10 block bg-white dark:shadow-slate-50 shadow-black dark:bg-black dark:text-white lg:hidden bottom-navigation"
         >
             <div id="tabs" className="flex justify-between ">
                 {

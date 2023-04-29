@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 
 function useTitle(title){
-    document.title = title + " | DEVELOPERS";
+    useEffect(()=>{
+        document.title = title + " | DEVELOPERS";
+    },[title])
+    return null
 }
 export default useTitle;
