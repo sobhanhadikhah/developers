@@ -10,7 +10,7 @@ const PostCardd = (props) => {
     }
     return (
         <div
-            className="lg:w-[600px]  w-full p-4 mx-3 font-mono  dark:bg-black bg-blue-600 selection:text-white selection:bg-black dark:selection:bg-sky-400 rounded-xl border border-gray-300 dark:border-gray-800"
+            className="lg:w-[600px]  w-full p-4 mx-3 font-mono    selection:text-white selection:bg-black dark:selection:bg-sky-400 rounded-xl border border-gray-300 dark:border-gray-800"
         >
             <div className="flex flex-col " >
                 {/* profile auth */}
@@ -34,6 +34,6 @@ const PostCardd = (props) => {
             </div>
         </div>
     );
-}
+};
 
 export default PostCardd;

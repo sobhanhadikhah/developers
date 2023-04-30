@@ -4,8 +4,8 @@ function MainPostData(props) {
     const { hadnleOnReadMore, title, description, showFullText } = props;
 
     return (
-        <div className="flex flex-col justify-center w-full text-black dark:text-white" >
-            <h1 className="py-2 text-lg font-extrabold lg:text-xl " >{title}</h1>
+        <div className="flex flex-col justify-center w-full " >
+            <h1 className="py-2 text-lg font-extrabold text-sky-500 lg:text-xl " >{title}</h1>
             <p className="text-sm font-light leading-relaxed text-gray-400 lg:text-base " >
                 {showFullText === false && description.length > 275 ?
                     (

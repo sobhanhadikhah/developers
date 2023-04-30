@@ -42,7 +42,7 @@ function Header({ theme, setTheme }) {
 
     }
     return (
-        <header className="sticky top-0 z-50 text-white bg-white shadow-md dark:bg-black dark:bg-opacity-80 bg-opacity-30 backdrop-filter backdrop-blur-lg font-sanst-semibold " >
+        <header className="sticky top-0 z-50 text-white bg-white shadow-md dark:bg-black dark:bg-opacity-5 bg-opacity-30 backdrop-filter backdrop-blur-lg font-sanst-semibold " >
             <div className=" lg:h-[98px] h-[68px]  flex items-center  max-w-2xl mx-auto " >
                 <h3 className="items-center justify-center w-full text-center text-black lg:text-left" >
                     <Logo />
