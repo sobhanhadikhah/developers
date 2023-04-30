@@ -26,7 +26,7 @@ function SettingPage() {
 
     }
     return (
-        <section className="h-screen bg-black" >
+        <section className="h-screen bg-white dark:bg-black " >
 
             <div className="max-w-2xl mx-auto " >
                 <div className="p-3 font-mono text-xl text-black dark:text-sky-400 " >
