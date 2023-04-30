@@ -16,13 +16,32 @@ export default defineConfig({
     includeAssets: [
         "**/*",
     ],
+    registerType:"autoUpdate",
+    outDir:"dist",
     manifest:{
       name: 'Developers', // The name of your app
       short_name: 'DEVS', // The short name of your app
       display: 'standalone', // The display mode of your app
+      description: "ViteJS example to show how to create PWA app throw the easyest way",
       scope: '/', // The scope of your app
       start_url: '/', // The start URL of your app
-      
+      icons: [
+        {
+          src:"android-chrome-192x192.png",
+          sizes:"192x192",
+          type:"image/png"
+        },
+        {
+          src:"android-chrome-512x512.png",
+          sizes:"512x512",
+          type:"image/png"
+        },
+        {
+          src:"android-chrome-192x192.png",
+          sizes:"192x192",
+          type:"image/png"
+        },
+      ]
   }
   })],
   

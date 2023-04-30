@@ -30,4 +30,4 @@ function MainPostData(props) {
     )
 }
 
-export default MainPostData
+export default MainPostData;
