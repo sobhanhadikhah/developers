@@ -26,23 +26,27 @@ function SettingPage() {
 
     }
     return (
-        <div className="max-w-2xl mx-auto" >
-            <div className="p-3 font-mono" >
-                <h1>Setting</h1>
+        <section className="h-screen bg-black" >
+
+            <div className="max-w-2xl mx-auto " >
+                <div className="p-3 font-mono text-xl text-black dark:text-sky-400 " >
+                    <h1>Settings</h1>
+                    <div className="border-b" />
+                </div>
+                <div className="flex gap-4 ml-3" >
+
+                    <button
+                        className={` font-mono ${isAuth ? "text-red-500" : "text-sky-500"}`}
+                        onClick={isAuth ? handleOnLogout : handleOnLogin}
+
+
+                    >
+                        {isAuth ? <span className="text-base " >Logout</span> : <span className="flex items-center text-lg gap-x-3 " > Join Us  With Your Goggle Account  <FcGoogle /> </span>}
+                    </button>
+                </div>
+
             </div>
-            <div className="grid items-center place-content-center " >
-
-                <button
-                    className={` font-mono ${isAuth ? "text-red-500" : "text-sky-500"}`}
-                    onClick={isAuth ? handleOnLogout : handleOnLogin}
-
-
-                >
-                    {isAuth ? <span className="text-xl " >Logout</span> : <span className="flex items-center text-lg gap-x-3 " > Join Us  With Your Goggle Account  <FcGoogle /> </span>}
-                </button>
-            </div>
-
-        </div>
+        </section>
     )
 }
 
