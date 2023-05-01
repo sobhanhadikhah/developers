@@ -15,7 +15,7 @@ const RootLayout = () => {
                 <Outlet />
             </main>
             <NavigitionBar />
-            {/* <Fotter /> */}
+            <Fotter />
 
         </div>
     );

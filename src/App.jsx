@@ -3,7 +3,7 @@ import AllRoute from "./routes/allRoute"
 function App() {
 
   return (
-    <div className="" >
+    <div className="h-screen bg-black" >
       <AllRoute />
     </div>
   )
